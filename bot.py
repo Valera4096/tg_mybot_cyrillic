@@ -8,7 +8,7 @@ from aiogram.filters.command import Command
 TOKEN =os.getenv('TOKEN') 
 bot = Bot(token= TOKEN)
 dp = Dispatcher(bot=bot)
-logging.basicConfig(level= logging.INFO)
+logging.basicConfig(level= logging.INFO, filename = 'mylog.log')
 
 @dp.message(Command(commands=['start']))
 async def greetings_user(message: Message):
